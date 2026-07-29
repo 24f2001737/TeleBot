@@ -14,3 +14,63 @@
 {"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [72, 198, 305, 417, 13], \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358783.6281874}
 {"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1785358821.978703}
 {"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785358828.5454018}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1785359218.652398}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785359225.496671}
+{"type": "incoming", "chat_id": 1134490816, "text": "Hello from the grading test!", "timestamp": 1785360130.3021088}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785360137.617788}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\"state\": \"<state name>\"}", "timestamp": 1785360190.1373122}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785360195.5476696}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: [223, 346, 299, 216, 416]. Reply with ONLY {\"values\": [<numbers>]}.", "timestamp": 1785360199.195463}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [376.8], \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785360205.725341}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\"state\": \"<state name>\"}", "timestamp": 1785360597.0982316}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\":\"Assam\"}", "timestamp": 1785360604.0315588}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: [223, 346, 299, 216, 416]. Reply with ONLY {\"values\": [<numbers>]}.", "timestamp": 1785360604.8604486}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\":[376.8]}", "timestamp": 1785360621.4751465}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\"state\": \"<state name>\"}", "timestamp": 1785360985.5992236}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785360994.4809575}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: [223, 346, 299, 216, 416]. Reply with ONLY {\"values\": [<numbers>]}.", "timestamp": 1785360995.4599123}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [376.8], \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785361006.0939689}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\"state\": \"<state name>\"}", "timestamp": 1785361179.139314}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785361180.8201804}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: [223, 346, 299, 216, 416]. Reply with ONLY {\"values\": [<numbers>]}.", "timestamp": 1785361181.6008358}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [346, 299, 216, 416, 354], \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785361182.5282485}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\"state\": \"<state name>\"}", "timestamp": 1785361250.7915413}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\"}", "timestamp": 1785361252.876619}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: [223, 346, 299, 216, 416]. Reply with ONLY {\"values\": [<numbers>]}.", "timestamp": 1785361253.7442784}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [288]}", "timestamp": 1785361254.6283772}
+{"type": "incoming", "chat_id": 1134490816, "text": "Calculate the sum of all numbers in this list: [36, 16, 39, 79, 84]. Reply with ONLY {\"sum\": <number>}.", "timestamp": 1785361405.913183}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"sum\": 254, \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785361407.6248453}
+{"type": "incoming", "chat_id": 1134490816, "text": "Calculate the arithmetic mean of all numbers in this list: [33, 62, 35, 29, 19]. Round the result to 2 decimal places. Reply with ONLY {\"average\": <number>}.", "timestamp": 1785361408.4645944}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"average\": 35.6, \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785361409.3528461}
+{"type": "incoming", "chat_id": 1134490816, "text": "Find the largest number in this list: [306, 260, 103, 929, 935, 780, 942]. Reply with ONLY {\"maximum\": <number>}.", "timestamp": 1785361410.4971852}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"maximum\": 942, \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785361413.7363145}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: [223, 346, 299, 216, 416]. Reply with ONLY {\"values\": [<numbers>]}.", "timestamp": 1785362027.466899}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [223, 346, 299, 216, 416], \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785362028.775238}
+{"type": "incoming", "chat_id": 1134490816, "text": "Calculate the sum of [10, 20, 30]. Reply with ONLY {\"sum\": <number>}.", "timestamp": 1785362168.2468553}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"sum\": 60, \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785362170.278552}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: [223, 346, 299, 216, 416]. Reply with ONLY {\"values\": [<numbers>]}.", "timestamp": 1785362345.1331592}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [346, 299, 216, 416, 396]}", "timestamp": 1785362348.1183672}
+{"type": "incoming", "chat_id": 1134490816, "text": "Calculate the sum of all numbers in this list: [36, 16, 39, 79, 84]. Reply with ONLY {\"sum\": <number>}.", "timestamp": 1785362349.194812}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"sum\": 254}", "timestamp": 1785362350.029253}
+{"type": "incoming", "chat_id": 1134490816, "text": "Calculate the arithmetic mean of all numbers in this list: [33, 62, 35, 29, 19]. Round the result to 2 decimal places. Reply with ONLY {\"average\": <number>}.", "timestamp": 1785362351.1975508}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"average\": 35.6}", "timestamp": 1785362352.1107655}
+{"type": "incoming", "chat_id": 1134490816, "text": "Find the largest number in this list: [306, 260, 103, 929, 935, 780, 942]. Reply with ONLY {\"maximum\": <number>}.", "timestamp": 1785362353.204555}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"maximum\": 942}", "timestamp": 1785362354.142274}
+{"type": "incoming", "chat_id": 1134490816, "text": "Calculate the sum of [10, 20, 30]. Reply with ONLY {\"sum\": <number>}.", "timestamp": 1785362421.7834954}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"sum\": 60}", "timestamp": 1785362422.931864}
+{"type": "incoming", "chat_id": 1134490816, "text": "What is the latest film of Christopher Nolan? Reply with ONLY {\"film\":<film_name>}", "timestamp": 1785362479.539222}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"film\": \"Oppenheimer\"}", "timestamp": 1785362480.799209}
+{"type": "incoming", "chat_id": 1134490816, "text": "You must calculate the answer. Given the input list [223, 346, 299, 216, 416], calculate each output as input multiplied by 1.02. For example, if an input is 100, its output is 102.00. Apply this calculation independently to ALL 5 inputs, keeping the same order. Round every output to exactly 2 decimal places. Return ONLY this JSON object: {\"values\": [result1, result2, result3, result4, result5]}. Do not copy the input values and do not omit any values.", "timestamp": 1785362552.9465885}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [227.46, 352.92, 304.98, 220.32, 424.32]}", "timestamp": 1785362554.6257682}
+{"type": "incoming", "chat_id": 1134490816, "text": "What is the beverage that helps people be awake and is extracted from beans? Reply with ONLY {\"beverage\":<beverage_name>}", "timestamp": 1785362624.7209299}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"beverage\": \"coffee\"}", "timestamp": 1785362625.8846858}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which bird can fly backward? Reply with ONLY {\"bird\":<bird_name>}", "timestamp": 1785362689.6823118}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"bird\": \"hummingbird\"}", "timestamp": 1785362690.8361764}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which city is known as the City of Joy in India? Reply with ONLY {\"city\":<city_name>}", "timestamp": 1785362747.127793}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"city\": \"Kolkata\"}", "timestamp": 1785362748.6410625}
+{"type": "incoming", "chat_id": 1134490816, "text": "What fruit is known as \"The King of Fruits\" and has a distinct smell? Reply with ONLY {\"fruit\":<fruit_name>}", "timestamp": 1785362807.460084}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"fruit\": \"durian\"}", "timestamp": 1785362808.604543}
+{"type": "incoming", "chat_id": 1134490816, "text": "Who was the first person to win a Nobel Prize in two different scientific fields? Reply with ONLY {\"person\":<person_name>}", "timestamp": 1785362851.4175491}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"person\": \"Marie Curie\"}", "timestamp": 1785362853.0536144}
+{"type": "incoming", "chat_id": 1134490816, "text": "Eboracum was the ancient Roman name for which modern-day English city? Reply with ONLY {\"city\":<city_name>}", "timestamp": 1785362889.6786609}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"city\": \"York\"}", "timestamp": 1785362891.0359318}
