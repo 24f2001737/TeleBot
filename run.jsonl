@@ -1,0 +1,12 @@
+{"type": "incoming", "chat_id": 1134490816, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}\"", "timestamp": 1785338168.1154256}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"answer\": 30, \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785338180.940595}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1785358207.8076022}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358213.8594646}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1785358214.7404795}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358219.964075}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1785358220.6972637}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358228.2531414}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: $inputs. Reply with ONLY {\\\"values\\\": [<numbers>]}.", "timestamp": 1785358247.004527}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [], \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358250.8023534}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: rng.sample(range(10, 500), 5). Reply with ONLY {\\\"values\\\": [<numbers>]}.", "timestamp": 1785358491.6302726}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [123, 287, 45, 402, 256], \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358497.481859}
