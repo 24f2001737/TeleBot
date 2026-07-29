@@ -4,18 +4,34 @@ import os
 from openai import OpenAI
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
+from flask import Flask
+import threading
 
-# --- fill these in with your own values ---
+
+health_app = Flask(__name__)
+
+@health_app.route("/")
+def home():
+    return "Bot is alive!", 200
+
+@health_app.route("/health")
+def health():
+    return "OK", 200
+
+
+def run_health_server():
+    port = int(os.environ.get("PORT", 10000))
+    health_app.run(host="0.0.0.0", port=port)
+    
 TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']
 AIPIPE_TOKEN = os.environ['AIPIPE_TOKEN']
-LOG_URL = "https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl"  # see Step 5 — where run.jsonl will be hosted
-# -------------------------------------------
+LOG_URL = "https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl"  
+
 
 client = OpenAI(base_url="https://aipipe.org/openai/v1", api_key=AIPIPE_TOKEN)
 LOG_FILE = "run.jsonl"
 
-# Keeps the last few messages per chat, so multi-turn questions work —
-# "answer the LAST message" still needs the earlier ones for context.
+
 conversation_history = {}
 
 def log_event(event: dict):
@@ -31,8 +47,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     history = conversation_history.setdefault(chat_id, [])
     history.append({"role": "user", "content": user_text})
 
-    # Ask the AI to work out the answer. The system prompt tells it exactly how to
-    # format the final reply — this is the part that MUST match what the question asked.
+    
     system_prompt = (
     "You are a highly accurate data analyst solving automated data-analysis "
     "questions.\n\n"
@@ -70,13 +85,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_text = response.choices[0].message.content.strip()
     history.append({"role": "assistant", "content": reply_text})
 
-    # Make sure we actually reply with valid JSON containing "log_url" — if the model
-    # forgot the log_url field or wrapped it in markdown, fix it up here so the grader
-    # never sees a malformed reply.
+    
     try:
         parsed = json.loads(reply_text)
     except json.JSONDecodeError:
-        # Model added extra text — try to pull out just the {...} part.
+        
         start, end = reply_text.find("{"), reply_text.rfind("}")
         parsed = json.loads(reply_text[start:end + 1])
     
@@ -87,5 +100,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 app = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-print("Bot is running... (Ctrl+C to stop)")
+
+print("Starting health server...")
+threading.Thread(target=run_health_server, daemon=True).start()
+
+print("Bot is running...")
 app.run_polling()
