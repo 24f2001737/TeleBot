@@ -10,3 +10,7 @@
 {"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [], \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358250.8023534}
 {"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: rng.sample(range(10, 500), 5). Reply with ONLY {\\\"values\\\": [<numbers>]}.", "timestamp": 1785358491.6302726}
 {"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [123, 287, 45, 402, 256], \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358497.481859}
+{"type": "incoming", "chat_id": 1134490816, "text": "Forecast for these inputs: rng.sample(range(10, 500), 5). Reply with ONLY {\\\"values\\\": [<numbers>]}.", "timestamp": 1785358776.5308075}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"values\": [72, 198, 305, 417, 13], \"log_url\": \"PASTE_YOUR_PUBLIC_LOG_URL_HERE\"}", "timestamp": 1785358783.6281874}
+{"type": "incoming", "chat_id": 1134490816, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1785358821.978703}
+{"type": "outgoing", "chat_id": 1134490816, "text": "{\"state\": \"Assam\", \"log_url\": \"https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl\"}", "timestamp": 1785358828.5454018}
