@@ -4,11 +4,12 @@ import os
 from openai import OpenAI
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
-from flask import Flask
+from flask import Flask, send_file
 import threading
 
 
 health_app = Flask(__name__)
+LOG_FILE = "run.jsonl"
 
 @health_app.route("/")
 def home():
@@ -18,6 +19,16 @@ def home():
 def health():
     return "OK", 200
 
+@health_app.route("/run.jsonl")
+def run_log():
+    if not os.path.exists(LOG_FILE):
+        return "", 200
+
+    return send_file(
+        LOG_FILE,
+        mimetype="application/jsonl"
+    )
+
 
 def run_health_server():
     port = int(os.environ.get("PORT", 10000))
@@ -25,11 +36,9 @@ def run_health_server():
     
 TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']
 AIPIPE_TOKEN = os.environ['AIPIPE_TOKEN']
-LOG_URL = "https://raw.githubusercontent.com/24f2001737/TeleBot/refs/heads/main/run.jsonl"  
-
+LOG_URL = "https://telebot-tds.onrender.com/run.jsonl"
 
 client = OpenAI(base_url="https://aipipe.org/openai/v1", api_key=AIPIPE_TOKEN)
-LOG_FILE = "run.jsonl"
 
 
 conversation_history = {}
