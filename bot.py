@@ -60,32 +60,46 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     system_prompt = (
     "You are a highly accurate data analyst solving automated data-analysis "
     "questions.\n\n"
-    
+
     "IMPORTANT RULES:\n"
-    
+
     "1. Answer the LAST user message. Earlier messages are context only.\n"
-    
+
     "2. Return EXACTLY ONE valid JSON object and absolutely nothing else. "
     "No markdown, no code fences, and no explanations.\n"
-    
-    "3. Follow the exact JSON structure requested by the user.\n"
-    
-    "4. NEVER add extra keys. In particular, NEVER add a 'log_url' key, "
-    "unless the user's message explicitly requests a 'log_url' key.\n"
-    
-    "5. If the user provides a list and asks for a calculation on every item, "
+
+    "3. Follow the requested answer shape exactly.\n"
+
+    "4. Return ONLY the answer object requested by the question. "
+    "Do NOT add 'log_url', 'answer', metadata, explanations, or any other "
+    "wrapper unless they are explicitly part of the requested answer data.\n"
+
+    "5. If the question asks for an object such as "
+    "{\"country\": \"<country name>\"}, return exactly that object.\n"
+
+    "6. If the user provides a list and asks for a calculation on every item, "
     "perform the calculation on EVERY item and preserve the original order.\n"
-    
-    "6. If the user explicitly provides a mathematical operation or formula, "
+
+    "7. If the user explicitly provides a mathematical operation or formula, "
     "follow that formula exactly.\n"
-    
-    "7. Carefully calculate numerical answers yourself. Do not simply repeat "
-    "the input values when a transformation is requested.\n"
-    
-    "8. For multi-turn questions, use previous messages as context but answer "
-    "only the latest user request.\n"
-    
-    "9. The final response must be valid JSON that can be parsed using json.loads()."
+
+    "8. Carefully calculate numerical answers yourself. "
+    "Do not simply repeat input values when a transformation is requested.\n"
+
+    "9. For data retrieval questions, use the information available to you "
+    "and reason carefully about the requested dataset, indicator, years, "
+    "countries, and calculation.\n"
+
+    "10. For multi-turn questions, use previous messages as context but "
+    "answer only the latest user request.\n"
+
+    "11. Your response will be wrapped automatically by the Python application "
+    "as {\"answer\": <your response>, \"log_url\": <public log URL>}.\n"
+
+    "12. Therefore, NEVER generate that outer wrapper yourself.\n"
+
+    "13. The final response must be valid JSON that can be parsed using "
+    "json.loads()."
 )
     response = client.chat.completions.create(
         model="gpt-4o",
@@ -98,15 +112,26 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         parsed = json.loads(reply_text)
     except json.JSONDecodeError:
-        start, end = reply_text.find("{"), reply_text.rfind("}")
+        start = reply_text.find("{")
+        end = reply_text.rfind("}")
+
+        if start == -1 or end == -1:
+            raise ValueError("Model did not return valid JSON")
+
         parsed = json.loads(reply_text[start:end + 1])
 
-    # The LLM gives only the answer requested by the question.
-    # The bot itself adds the required outer structure.
-    final_reply = json.dumps({
-        "answer": parsed,
+
+    if isinstance(parsed, dict) and "answer" in parsed:
+        answer = parsed["answer"]
+    else:
+        answer = parsed
+
+    final_response = {
+        "answer": answer,
         "log_url": LOG_URL
-    })
+    }
+
+    final_reply = json.dumps(final_response, ensure_ascii=False)
 
     log_event({
         "type": "outgoing",
