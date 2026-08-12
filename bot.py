@@ -89,13 +89,22 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         parsed = json.loads(reply_text)
     except json.JSONDecodeError:
-        
         start, end = reply_text.find("{"), reply_text.rfind("}")
         parsed = json.loads(reply_text[start:end + 1])
-    
-    final_reply = json.dumps(parsed)
 
-    log_event({"type": "outgoing", "chat_id": chat_id, "text": final_reply})
+    # The LLM gives only the answer requested by the question.
+    # The bot itself adds the required outer structure.
+    final_reply = json.dumps({
+        "answer": parsed,
+        "log_url": LOG_URL
+    })
+
+    log_event({
+        "type": "outgoing",
+        "chat_id": chat_id,
+        "text": final_reply
+    })
+
     await update.message.reply_text(final_reply)
 
 app = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
